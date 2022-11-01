@@ -1,0 +1,113 @@
+body {
+	font-family: Montserrat;
+}
+
+h1,
+p {
+	text-align: center;
+}
+
+form {
+	background-color: rgb(236, 242, 243);
+	position: relative;
+}
+
+label {
+	display: inline-block;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+}
+
+input {
+	float: absolute;
+	width: 75vw;
+	margin-left: 20px;
+	font-family: Montserrat;
+}
+
+button {
+	background-color: rgb(60, 239, 174);
+	font-family: Montserrat;
+	font-size: 0.9rem;
+	margin: 0.5rem 1rem 1rem;
+}
+
+#meme-container {
+	background-color: rgba(255, 255, 255, 0);
+	padding: 10px;
+	margin: 0;
+}
+
+.meme-div {
+	background-color: rgba(255, 255, 255, 0);
+	position: relative;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.meme-img {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+}
+
+.top-style {
+	position: absolute;
+	text-align: center;
+	justify-content: center;
+	top: 0px;
+	z-index: 3;
+	width: 500px;
+	font-family: 'Sigmar One';
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	stroke: black;
+	stroke-width: 1px;
+	font-size: 4em;
+	font-weight: bold;
+}
+
+.bottom-style {
+	position: absolute;
+	text-align: center;
+	bottom: 5px;
+	z-index: 3;
+	width: 500px;
+	font-family: 'Sigmar One';
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	font-size: 4em;
+	font-weight: bold;
+}
+
+.delete-button {
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	width: 500px;
+	height: 500px;
+	color: rgba(255, 255, 255, 0);
+	background-color: rgba(60, 239, 173, 0);
+	margin: 0px;
+	border: 0px;
+	border-radius: 10px;
+	padding: 0px;
+}
+
+.delete-button:hover {
+	position: absolute;
+	z-index: 10;
+	font-family: 'Sigmar One';
+	font-weight: lighter;
+	font-size: 12rem;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.763);
+	background-color: rgba(0, 0, 0, 0.695);
+	width: 500px;
+	height: 500px;
+	padding: 0px;
+	border-radius: 10px;
+}

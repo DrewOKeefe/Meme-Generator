@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Meme Generator</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<form id="memeform">
+			<h1>MEME GENERATOR</h1>
+			<p>Fill out the form to start creating memes!</p>
+			<label for="image url">Image URL:</label>
+			<input
+				type="text"
+				placeholder="Enter URL address for meme image"
+				id="img-url"
+				value="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80" />
+			<br />
+			<label for="top text">Text On Top:</label>
+			<input
+				type="text"
+				placeholder="Enter text for the top of meme"
+				id="top-text"
+				value="top" />
+			<br />
+			<label for="bottom text">Text On Bottom:</label>
+			<input
+				type="text"
+				placeholder="Enter text for the bottom of meme"
+				id="bottom-text"
+				value="bottom" />
+			<br />
+			<button class="submit">Add Meme</button>
+		</form>
+		<h3>Click Meme To Delete</h3>
+		<div id="meme-container"></div>
+	</body>
+	<script src="app.js"></script>
+</html>
