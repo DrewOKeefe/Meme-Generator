@@ -33,16 +33,19 @@
 				type="text"
 				placeholder="Enter text for the top of meme"
 				id="top-text"
-				value="top" />
+				value="top"
+				maxlength="18" />
 			<br />
 			<label for="bottom text">Text On Bottom:</label>
 			<input
 				type="text"
 				placeholder="Enter text for the bottom of meme"
 				id="bottom-text"
-				value="bottom" />
+				value="bottom"
+				maxlength="18" 
+				onkeyup="success()"/>
 			<br />
-			<button class="submit">Add Meme</button>
+			<button class="submit" disabled>Add Meme</button>
 		</form>
 		<h3>Click Meme To Delete</h3>
 		<div id="meme-container"></div>
