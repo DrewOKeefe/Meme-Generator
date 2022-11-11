@@ -1,5 +1,21 @@
 const form = document.querySelector('#memeform');
 const memeContainer = document.querySelector('#meme-container');
+function success() {
+	if (document.querySelectorAll('input').value === '') {
+		document.querySelector('button').disabled = true;
+	} else {
+		document.querySelector('button').disabled = false;
+	}
+}
+function isValidHttpUrl(string) {
+	let url;
+	try {
+		url = new URL(string);
+	} catch (_) {
+		return false;
+	}
+	return url.protocol === 'http:' || url.protocol === 'https:';
+}
 
 form.addEventListener('submit', function (e) {
 	e.preventDefault();
@@ -11,10 +27,14 @@ form.addEventListener('submit', function (e) {
 	//INSERT IMAGE:
 	const imgUrl = document.querySelector('#img-url');
 	let img = document.createElement('img');
-	img.src = imgUrl.value;
-	img.classList.add('meme-img');
-	memeDiv.appendChild(img);
-	imgUrl.value = '';
+	if (isValidHttpUrl(imgUrl.value)) {
+		img.src = imgUrl.value;
+		img.classList.add('meme-img');
+		memeDiv.appendChild(img);
+		imgUrl.value = '';
+	} else {
+		alert('Invalid URL');
+	}
 
 	// INSERT TOP TEXT:
 	const topText = document.querySelector('#top-text');
@@ -43,4 +63,5 @@ form.addEventListener('submit', function (e) {
 	deleteBtn.addEventListener('click', function (e) {
 		memeDiv.remove();
 	});
+	document.querySelector('button').disabled = true;
 });
